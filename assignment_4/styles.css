@@ -20,22 +20,34 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
+  box-sizing: border-box;
   background-color: #f6fcfb;
   font-family: "Sofia Sans", sans-serif;
 }
 
 main {
   display: flex;
+  flex-wrap: wrap;
   height: 100vh;
-  justify-content: space-evenly;
-  align-items: flex-start;
   padding-top: 30px;
+}
+
+header {
+  margin: 7% 10% 0 10%;
+}
+
+.header,
+.signup__form {
+  flex: 1;
+}
+
+footer {
+  flex-basis: 100%;
 }
 
 section {
   max-width: 540px;
 }
-
 
 .logo {
   width: 80px;
@@ -54,25 +66,26 @@ section {
   color: #000b0a;
 }
 
+.header h1,
 .title__description p {
-  font-size: 0.9.5rem;
+  padding-left: 10px;
+}
+
+.title__description p {
+  font-size: 18px;
   font-weight: 400;
   color: var(--color-text-secondary);
 }
 
-.header {
-  margin-top: 7%;
-}
-
-.mobile__text {
+.mobile__description {
   display: none;
 }
 
 /* Form container */
 .signup__form {
   width: 100%;
-  max-width: 580px;
-  margin-right: 40px;
+  max-width: 600px;
+  margin: 1.5% 10% 0 0;
   background-color: #ffffff;
   box-shadow: 0 4px 50px 0 #0408131a;
 }
@@ -157,7 +170,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   border: none;
   padding: 15px;
-  margin: 15px 0;
   color: #ffffff;
   border-radius: 2px;
   font-weight: 500;
@@ -172,10 +184,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Privacy policy agreement */
-footer .form-footer {
-  font-size: 16px;
-  text-align: center;
+footer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  text-align: right;
   color: #000000;
+  margin: -4% 13.5% 0 0;
 }
 
 /* Anchor tags: Terms & C and Privacy policy */
@@ -188,6 +203,13 @@ footer .form-footer {
 @media (max-width: 768px) {
   body {
     flex-direction: column;
+    padding: 10px;
+    margin-top: 25px;
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
   }
 
   section {
@@ -195,19 +217,24 @@ footer .form-footer {
   }
 
   main {
-    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     padding: 0 10px;
     width: 100%;
   }
 
-  .desktop__text {
+  .header {
+    margin: 0;
+  }
+
+  .desktop__description {
     display: none;
   }
 
-  .mobile__text {
+  .mobile__description {
     display: block;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 100;
     color: var(--color-text-secondary);
     margin: 15px 0;
   }
@@ -226,9 +253,8 @@ footer .form-footer {
     grid-column: span 2;
   }
 
-  footer .form-footer {
-    padding: 0 20px;
-    text-align: center;
-    margin: -15px 0 25px 0;
+  .form-submit {
+    margin: 0;
   }
+
 }
