@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-
 /* ========== Css Reset. Author: Josh W. Comeau ======  */
 
 *,
@@ -56,7 +55,6 @@ h6 {
   isolation: isolate;
 }
 
-
 /* ======================== Styles ========================= */
 
 /* Variables: Base Styles */
@@ -81,7 +79,7 @@ body {
 .nav__bar {
   display: flex;
   align-items: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2rem;
   justify-content: space-between;
   box-shadow: var(--shadow-x-axis);
 }
@@ -127,7 +125,7 @@ main .checkout__container {
   padding: 1rem 2rem;
 }
 
-/* Basic Information */
+/* Basic and Payment Information */
 
 .basic__info {
   margin: 2rem 0;
@@ -144,6 +142,30 @@ main .checkout__container {
   margin: 0;
 }
 
+.numbered__heading {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.numbered__heading::before {
+  content: attr(data-number);
+  position: absolute;
+  left: 0;
+  top: 37%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 2px solid #548bc5;
+  color: #548bc5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
 /* All label & input boxes */
 label {
   display: block;
@@ -152,35 +174,73 @@ label {
 }
 
 input {
-    border: none;
-    width: 100%;
-    padding: 0.2rem 0.8rem;
-    border-radius: 0.15rem;
-    background-color: #edeff2;
+  border: none;
+  width: 100%;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.15rem;
+  background-color: #edeff2;
 }
 
 .full__width {
-    grid-column: 1 / -1;
-    margin-top: -1rem;
-    max-width: 20rem;
+  grid-column: 1 / -1;
+  margin-top: -1rem;
+  max-width: 20rem;
 }
 
 /* Buy Button */
 .buy__wppusher {
-    width: 100%;
-    padding: 0.5rem 0;
-    border: none;
-    border-radius: 0.25rem;
-    background-color: #038E7D;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #fff;
-    margin-top:2.5rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #038e7d;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 2.5rem;
 }
 
+/* Help Support */
+.support__container {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.powered__by {
+  font-size: 0.8rem;
+  max-width: 27%;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  text-align: center;
+  background-color:#566473;
+  color: var(--color-text-secondary);
+  left: 50%;
+  font-size: 0.6rem;
+  margin: 1% 0 1% 35%;
+
+  & .strip {
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+}
 
 /* Plan and Pricing */
 .checkout__plan {
   background-color: #1179bf;
   padding: 1rem;
+}
+
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #566473;
+  padding: 1rem 2rem;
+}
+
+footer a {
+  color: #038e7d;
+  text-decoration: none;
 }
