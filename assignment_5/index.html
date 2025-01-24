@@ -12,7 +12,7 @@
     <header>
         <nav class="nav__bar">
             <div class="nav__logo">
-                <img src="./assets/wppusher-logo.png" alt="company logo">
+                <img src="./assets/wppusher-logo.svg" alt="company logo">
             </div>
 
             <div class="nav__links">
@@ -36,7 +36,7 @@
 
                 <!-- Basic information -->
                 <div class="basic__info">
-                    <h3>Your Basic Informaton</h3>
+                    <h3 class="numbered__heading" data-number="1"> Your Basic Informaton</h3>
 
                     <form action="#" method="post">
                         <div class="form__grid">
@@ -77,14 +77,15 @@
 
                 <!-- Payment Information -->
                 <div class="payment__info">
-                    <h3>Your Payment Information</h3>
+                    <h3 class="numbered__heading" data-number="2"> Your Payment Information</h3>
 
                     <form action="#" method="post">
-                        <div class="card__info">
+                        <div class="form__field">
                             <label for="credit-card" class="credit__card">Credit Card</label>
                             <input
+                            class="card__input"
                             type="text"
-                            placeholder="Card Number  MM/YY  CCV"
+                            placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
                             pattern="[0-9\s]{13,19}"
                             maxlength="26"
                             inputmode="numeric"
@@ -106,7 +107,7 @@
                   </div>
 
                   <div class="powered__by">
-                    Powered by stripe
+                    <p>Powered by<span class="strip"> stripe</span></p>
                   </div>
 
             </div>
@@ -134,7 +135,7 @@
                         </ul>
                     </div>
 
-                    <div class="switch__pln">
+                    <div class="switch__plan">
                         Need <strong>20</strong> client sites? <a href="#">Switch to the Agency plan</a>
                     </div>
 
@@ -147,7 +148,7 @@
                         </p>
 
                         <figure class="reviewer">
-                            <img src="./assets/reviewer-img.png" alt="reviewer image">
+                            <img src="./assets/reviewer.svg" alt="reviewer image">
                             <figcaption>Kirk Beard</figcaption>
                         </figure>
                     </div>
