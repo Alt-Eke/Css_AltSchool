@@ -11,9 +11,7 @@
 <body>
     <header>
         <nav class="nav__bar">
-            <div class="nav__logo">
                 <img src="./assets/wppusher-logo.svg" alt="company logo">
-            </div>
 
             <div class="nav__links">
                 <a href="#">Download</a>
@@ -44,31 +42,28 @@
                             <div class="form__field">
                                 <label for="first-name" class="first__name">First Name</label>
                                 <input class="form__input"
-                                    type="text"
-                                    id="first-name"
-                                    name="first-name"
-                                    placeholder="Jane"
-                                    required>
+                                 type="text" id="first-name"
+                                 name="first-name"
+                                 placeholder="Jane"
+                                 required>
                             </div>
 
                             <div class="form__field">
                                 <label for="last-name" class="last__name">Last Name</label>
                                 <input class="form__input"
-                                    type="text"
-                                    id="last-name"
-                                    name="last-name"
-                                    placeholder="Doe"
-                                    required>
+                                 type="text" id="last-name"
+                                 name="last-name"
+                                 placeholder="Doe"
+                                 required>
                             </div>
 
                             <div class="form__field full__width">
                                 <label for="email" class="email">Email</label>
                                 <input class="form__input"
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="johndoe@example.com"
-                                required>
+                                 type="email" id="email"
+                                 name="email"
+                                 placeholder="johndoe@example.com"
+                                 required>
                             </div>
                         </div>
 
@@ -82,38 +77,36 @@
                     <form action="#" method="post">
                         <div class="form__field">
                             <label for="credit-card" class="credit__card">Credit Card</label>
-                            <input
-                            class="card__input"
-                            type="text"
-                            id="credit-card"
-                            placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
-                            pattern="[0-9\s]{13,19}"
-                            maxlength="26"
-                            inputmode="numeric"
-                            autocomplete="cc-number"
-                            required>
+                            <input class="card__input"
+                             type="text" id="credit-card"
+                             placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
+                             pattern="[0-9\s]{13,19}"
+                                maxlength="26"
+                             inputmode="numeric"
+                             autocomplete="cc-number"
+                             required>
                         </div>
                     </form>
-                 </div>
+                </div>
 
-                 <!-- Buy button -->
-                  <button class="buy__wppusher">
+                <!-- Buy button -->
+                <button class="buy__wppusher">
                     Buy WP Pusher
-                  </button>
+                </button>
 
-                  <!-- Help Support -->
-                  <div class="support__container">
-                      <span class="help__icon"></span>
-                      <p>
+                <!-- Help Support -->
+                <div class="support__container">
+                    <span class="help__icon"></span>
+                    <p>
                         <strong>Need any help?</strong>
                         Don’t hesitate to <a class="support__link" href="#">contact</a> support!
                     </p>
-                  </div>
+                </div>
 
-                  <div class="powered__by">
+                <div class="powered__by">
                     <p>Powered by</p>
                     <span class="strip"> stripe</span>
-                  </div>
+                </div>
 
             </div>
 
@@ -125,40 +118,44 @@
                     <div class="price__detail">
                         <div class="price">
                             <span class="currency">$</span>
-                            <span class="amount">99</span>
-                            <span class="period">/year</span>
+                            <div>
+                                <span class="amount">99</span>
+                                <span class="period">/ year</span>
+                            </div>
                         </div>
-                        <p>Automatically renews after 1 year</p>
                     </div>
-
-                    <!-- list of plan benefits (3 round-ticked bullets) -->
-                    <div class="benefit__list">
-                        <ul>
-                            <li>Use on <strong>5</strong> client sites</li>
-                            <li>Private repositories</li>
-                            <li>Email support</li>
-                        </ul>
-                    </div>
-
-                    <div class="switch__plan">
-                        Need <strong>20</strong> client sites? <a href="#">Switch to the Agency plan</a>
-                    </div>
-
-                    <div class="seperating__line"></div>
-
-                    <!-- review -->
-                    <div class="review">
-                        <p>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue,
-                            and the customer support is awesome!
-                        </p>
-
-                        <figure class="reviewer">
-                            <img src="./assets/reviewer.svg" alt="reviewer image">
-                            <figcaption>Kirk Beard</figcaption>
-                        </figure>
-                    </div>
-
+                    <p class="renewal__text">Automatically renews after 1 year</p>
                 </div>
+
+                <!-- list of plan benefits (3 round-ticked bullets) -->
+                <div class="benefit__list">
+                    <ul>
+                        <li>Use on <strong>5</strong> client sites</li>
+                        <li>Private repositories</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+
+                <div class="switch__plan">
+                    <p>
+                        Need <strong>20</strong> client sites? <a href="#">Switch to the Agency plan</a>
+                    </p>
+                </div>
+
+                <div class="seperating__line"></div>
+
+                <!-- review -->
+                <div class="review">
+                    <p>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue,
+                        and the customer support is awesome!
+                    </p>
+
+                    <figure class="reviewer">
+                        <img src="./assets/reviewer.svg" alt="reviewer image">
+                        <figcaption>Kirk Beard</figcaption>
+                    </figure>
+                </div>
+
             </div>
         </div>
     </main>
