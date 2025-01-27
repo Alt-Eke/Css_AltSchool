@@ -117,14 +117,14 @@ main {
   margin-top: -10%;
 }
 
-main .checkout__container {
+main .checkout {
   display: flex;
   margin-top: 14rem;
   box-shadow: 0 0.93rem 2.9rem 0 #2b404e18;
   max-width: 892px;
 }
 
-.checkout .title h2 {
+.checkout__title {
   font-size: 1.8rem;
   font-weight: var(--font-normal);
   color: var(--color-text-primary);
@@ -132,7 +132,7 @@ main .checkout__container {
 }
 
 /* Left bigger container (White backgroud) */
-.checkout__container .checkout {
+.checkout .checkout__form {
   background-color: #fff;
   color: var(--color-text-primary);
   padding: 1rem 2rem;
@@ -315,11 +315,11 @@ input {
 }
 
 /* Checkout Price plan/details */
-.price .period {
+.price .price__period {
   font-size: 0.8rem;
 }
 
-.price .amount {
+.price .price__amount {
   font-size: 45px;
   font-weight: 300;
 }
@@ -329,7 +329,7 @@ input {
   margin-top: -10px;
 }
 
-.currency {
+.price__currency {
   margin-top: 15px;
   padding-right: 3px;
   font-weight: var(--font-bold);
@@ -377,7 +377,7 @@ input {
 }
 
 /* Review and reviewer */
-.review {
+.text__italic {
   max-width: 13.8rem;
   font-size: 16px;
   font-style: italic;

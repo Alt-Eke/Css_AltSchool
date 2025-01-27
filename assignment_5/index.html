@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="nav__bar">
-                <img src="./assets/wppusher-logo.svg" alt="company logo">
+            <img src="./assets/wppusher-logo.svg" alt="company logo">
 
             <div class="nav__links">
                 <a href="#">Download</a>
@@ -24,13 +24,11 @@
     </header>
 
     <main>
-        <div class="checkout__container">
+        <div class="checkout">
 
             <!-- checkout info (white bg) -->
-            <div class="checkout">
-                <div class="title">
-                    <h2>Checkout</h2>
-                </div>
+            <section class="checkout__form">
+                    <h2 class="checkout__title">Checkout</h2>
 
                 <!-- Basic information -->
                 <div class="basic__info">
@@ -41,29 +39,20 @@
 
                             <div class="form__field">
                                 <label for="first-name" class="first__name">First Name</label>
-                                <input class="form__input"
-                                 type="text" id="first-name"
-                                 name="first-name"
-                                 placeholder="Jane"
-                                 required>
+                                <input class="form__input" type="text" id="first-name" name="first-name"
+                                    placeholder="Jane" required>
                             </div>
 
                             <div class="form__field">
                                 <label for="last-name" class="last__name">Last Name</label>
-                                <input class="form__input"
-                                 type="text" id="last-name"
-                                 name="last-name"
-                                 placeholder="Doe"
-                                 required>
+                                <input class="form__input" type="text" id="last-name" name="last-name" placeholder="Doe"
+                                    required>
                             </div>
 
                             <div class="form__field full__width">
                                 <label for="email" class="email">Email</label>
-                                <input class="form__input"
-                                 type="email" id="email"
-                                 name="email"
-                                 placeholder="johndoe@example.com"
-                                 required>
+                                <input class="form__input" type="email" id="email" name="email"
+                                    placeholder="johndoe@example.com" required>
                             </div>
                         </div>
 
@@ -77,22 +66,16 @@
                     <form action="#" method="post">
                         <div class="form__field">
                             <label for="credit-card" class="credit__card">Credit Card</label>
-                            <input class="card__input"
-                             type="text" id="credit-card"
-                             placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
-                             pattern="[0-9\s]{13,19}"
-                                maxlength="26"
-                             inputmode="numeric"
-                             autocomplete="cc-number"
-                             required>
+                            <input class="card__input" type="text" id="credit-card"
+                                placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
+                                pattern="[0-9\s]{13,19}" maxlength="26" inputmode="numeric" autocomplete="cc-number"
+                                required>
                         </div>
                     </form>
                 </div>
 
                 <!-- Buy button -->
-                <button class="buy__wppusher">
-                    Buy WP Pusher
-                </button>
+                <button class="buy__wppusher">Buy WP Pusher</button>
 
                 <!-- Help Support -->
                 <div class="support__container">
@@ -108,22 +91,20 @@
                     <span class="strip"> stripe</span>
                 </div>
 
-            </div>
+            </section>
 
             <!-- plan description (blue bg) -->
             <div class="checkout__plan">
                 <div class="plan__content">
                     <h3>Freelancer</h3>
 
-                    <div class="price__detail">
                         <div class="price">
-                            <span class="currency">$</span>
+                            <span class="price__currency">$</span>
                             <div>
-                                <span class="amount">99</span>
-                                <span class="period">/ year</span>
+                                <span class="price__amount">99</span>
+                                <span class="price__period">/ year</span>
                             </div>
                         </div>
-                    </div>
                     <p class="renewal__text">Automatically renews after 1 year</p>
                 </div>
 
@@ -142,10 +123,10 @@
                     </p>
                 </div>
 
-                <div class="seperating__line"></div>
+                <hr class="seperating__line">
 
                 <!-- review -->
-                <div class="review">
+                <blockquote class="text__italic">
                     <p>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue,
                         and the customer support is awesome!
                     </p>
@@ -154,7 +135,7 @@
                         <img src="./assets/reviewer.svg" alt="reviewer image">
                         <figcaption>Kirk Beard</figcaption>
                     </figure>
-                </div>
+                </blockquote>
 
             </div>
         </div>
