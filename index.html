@@ -4,93 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Css Assignments</title>
+    <title>All CSS Assignments</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
     <style>
         body {
             margin: 0;
+            min-height: 100vh;
             display: grid;
             place-items: center;
-            height: 100vh;
             font-family: "Josefin Sans", serif;
+            padding: 1rem;
         }
 
         .container {
-            width: 650px;
-            height: 500px;
-            padding: 25px;
+            width: min(650px, 90%);
+            height: auto;
+            min-height: 500px;
+            padding: 1.5rem;
             box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 8px;
         }
 
         .title {
-            margin: 5px 0;
-            display: grid;
-            place-items: center;
-            padding-bottom: 10px;
+            margin: 0.5rem 0;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
 
-            & p {
-                margin: 5px 0 10px 0;
-            }
-
+        .title p {
+            margin: 0.5rem 0;
         }
 
         .container h1 {
-            font-size: 30px;
-
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin: 0.5rem 0;
+            color: #011C34;
         }
 
-        .container h1,
         .description {
             text-align: center;
-            max-width: 50%;
-            margin: 3px;
-            line-height: 1.2;
-            justify-content: center;
-            align-items: center;
+            max-width: 80%;
+            margin: 0.5rem auto;
+            line-height: 1.4;
             color: #011C34;
         }
 
         .columns__wrapper {
-            display: flex;
-            justify-content: space-between;
-            margin-top: -10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .column {
-            width: 50%;
+            width: 100%;
         }
 
         ol {
-            padding-left: 50px;
+            padding-left: 2.5rem;
             margin: 0;
         }
 
         li {
             position: relative;
             color: #4F4F4F;
-            padding: 0 20px;
-            margin-top: 22px;
-            font-size: 16px;
-            line-height: 20px;
+            padding: 0 1rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
 
-            &:before {
-                content: '';
-                display: block;
-                width: 32px;
-                height: 32px;
-                top: -10px;
-                left: -28px;
-                border-radius: 50%;
-                border: 2px solid #ddd;
-                position: absolute;
-            }
+        li:before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            top: -10px;
+            left: -28px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            position: absolute;
         }
 
         .open__link {
             position: absolute;
-            right: 40%;
+            right: 0;
+            top: 0;
             width: 20px;
             height: 20px;
             opacity: 0.6;
@@ -108,27 +108,78 @@
             color: #011C34;
             text-decoration: none;
             transition: opacity 0.2s ease;
-
-            &:hover {
-                opacity: 0.7;
-            }
         }
 
-        ol.alt__colors {
-            li:nth-child(odd):before {
-                border-color: #0BAD02;
-            }
+        li a:hover {
+            opacity: 0.7;
+        }
 
-            li:nth-child(even):before {
-                border-color: #2378D5;
-            }
+        ol.alt__colors li:nth-child(odd):before {
+            border-color: #0BAD02;
+        }
+
+        ol.alt__colors li:nth-child(even):before {
+            border-color: #2378D5;
+        }
+
+        li p {
+            margin-top: 0.5rem;
+            margin-bottom: 0;
         }
 
         @media (max-width: 768px) {
-            .columns__wrapper {
-                display: flex;
-                flex-direction: column;
+            .container {
+                padding: 1rem;
+                margin: 0.5rem;
             }
+
+            .description {
+                max-width: 100%;
+            }
+
+            li {
+                padding-right: 2rem;
+            }
+
+            .open__link {
+                right: 40%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0.5rem;
+            }
+
+            ol {
+                padding-left: 2rem;
+            }
+
+            li:before {
+                width: 24px;
+                height: 24px;
+                left: -24px;
+                top: -5px;
+            }
+
+            .column-2 {
+                margin-top: -20px;
+            }
+
+            .open__link {
+                right: 40%;
+            }
+
+            .title {
+                margin: 0;
+                text-align: center;
+                padding-bottom: 0;
+            }
+
+            .columns__wrapper {
+                margin-bottom: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -155,7 +206,7 @@
                             <strong>Assignment 2</strong>
                         </a>
                         <a href="./assignment_2/index.html" class="open__link" target="_blank"></a>
-                        <p>Huckleberry Angency page, showcasing css box model and reponsiveness.</p>
+                        <p>Huckleberry Agency page, showcasing css box model and responsiveness.</p>
                     </li>
                     <li>
                         <a class="click__open" href="./assignment_3/index.html" target="_blank">
@@ -167,29 +218,28 @@
                 </ol>
             </div>
 
-            <!-- second column -->
-            <div class="column">
+            <div class="column column-2">
                 <ol class="alt__colors" start="4">
                     <li>
                         <a class="click__open" href="./assignment_4/index.html" target="_blank">
                             <strong>Assignment 4</strong>
                         </a>
                         <a href="./assignment_4/index.html" class="open__link" target="_blank"></a>
-                        <p>Responsive Wellness program resgistration form.</p>
+                        <p>Responsive Wellness program registration form.</p>
                     </li>
                     <li>
                         <a class="click__open" href="./assignment_5/index.html" target="_blank">
                             <strong>Assignment 5</strong>
                         </a>
                         <a href="./assignment_5/index.html" class="open__link" target="_blank"></a>
-                        <p>WP Pusher checkout page demosnstrating core css fundamentals.</p>
+                        <p>WP Pusher checkout page demonstrating core css fundamentals.</p>
                     </li>
                     <li>
                         <a class="click__open" href="./assignment_6/index.html" target="_blank">
                             <strong>Assignment 6</strong>
                         </a>
                         <a href="./assignment_6/index.html" class="open__link" target="_blank"></a>
-                        <p>"Scissors", a landing page for url shortner.</p>
+                        <p>"Scissors", a landing page for url shortener.</p>
                     </li>
                 </ol>
             </div>
