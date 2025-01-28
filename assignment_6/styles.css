@@ -1,0 +1,92 @@
+/* ========== Css Reset. Author: Josh W. Comeau ======  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* ======================= Font (Gilroy) =================== */
+
+@font-face {
+    font-family: Gilroy-Bold;
+    font-weight: 700;
+    src: url("gilroy_font/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    font-weight: 700;
+    src: url("gilroy_font/Gilroy-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    font-weight: 700;
+    src: url("gilroy_font/Gilroy-Medium.ttf") format("truetype");
+}
+
+
+/* ======================== Styles ========================= */
+
+/* Variables: Base Styles */
+:root {
+  --color-text-primary: ;
+  --color-text-secondary: ;
+  --color-text-tetiary: ;
+}
+
+body {
+  min-height: 100vh;
+  background: url("./assets/bg-aurora.png") no-repeat center center;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
