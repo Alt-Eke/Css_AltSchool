@@ -40,7 +40,7 @@ main {
 .header__content {
   margin: 4.5rem auto 3rem auto;
   padding-left: 1rem;
-  max-width: 900px;
+  max-width: 800px;
 
   & h1 {
     font-size: 2rem;
@@ -64,24 +64,26 @@ main {
 
 .card {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   place-self: center;
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 4px 4px 0 var(--color-bx-shadow);
   background-color: var(--color-bg-body);
   border-bottom: var(--color-bd-bottom) 8px solid;
+  padding-top: 0.8rem;
 }
 
 .card h2 {
-  position: absolute;
-  background-color: #ffbf00;
-  padding: 0.8rem 1.5rem;
-  border-bottom: 8px solid #cc9900;
+  display: inline-block;
   top: 7px;
-  margin: 0 1rem 0 0.06rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1.7rem;
+  /* position: absolute; */
   font-weight: 800;
+  background-color: #ffbf00;
+  border-bottom: 8px solid #cc9900;
   transform: translateX(-10px);
+  margin: -5px 20px 0 0;
 }
 
 .card__content {
@@ -92,7 +94,6 @@ main {
   font-size: 20px;
 
   & p:first-of-type {
-    margin-top: 5rem;
     margin-bottom: 1rem;
   }
 }
