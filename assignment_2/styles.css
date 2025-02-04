@@ -37,19 +37,19 @@ main {
   background-color: var(--color-bg-down);
 }
 
-header {
-  padding: 1rem;
-}
-
 .header__content {
   margin: 4.5rem auto 3rem auto;
-  padding-right: 28rem;
-  max-width: 860px;
+  padding-left: 1rem;
+  max-width: 900px;
 
   & h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 800;
+  }
+
+  & p {
+   max-width: 420px;
   }
 }
 
@@ -78,7 +78,7 @@ header {
   padding: 0.8rem 1.5rem;
   border-bottom: 8px solid #cc9900;
   top: 7px;
-  margin: 0 2rem 0 0.06rem;
+  margin: 0 1rem 0 0.06rem;
   font-size: 1.7rem;
   font-weight: 800;
   transform: translateX(-10px);
@@ -92,14 +92,7 @@ header {
   font-size: 20px;
 
   & p:first-of-type {
-    margin-top: 4.7rem;
+    margin-top: 5rem;
     margin-bottom: 1rem;
   }
 }
-
-@media (max-width: 768px) {
-  .header__content {
-    padding-right: 0;
-  }
-}
-
