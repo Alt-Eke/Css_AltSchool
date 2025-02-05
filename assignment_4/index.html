@@ -40,7 +40,7 @@
                                name="first-name"
                                placeholder="Tolu"
                                required
-                               aria-required="true">
+                               autocomplete="given-name">
                     </div>
 
                     <div class="form-field">
@@ -51,21 +51,22 @@
                                name="last-name"
                                placeholder="Tolu"
                                required
-                               aria-required="true">
+                               autocomplete="given-name">
                     </div>
 
                     <div class="form-field">
                         <label for="gender" class="form-label">Gender</label>
                         <div class="select-wrapper">
                             <select class="form-select"
-                                    id="gender"
-                                    name="gender"
-                                    required
-                                    aria-required="true">
+                             id="gender"
+                             name="gender"
+                             required>
                                 <option value="" disabled selected hidden>Select here</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
-                            </select>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                              </select>
                         </div>
                     </div>
 
@@ -76,7 +77,7 @@
                                id="dob"
                                name="dob"
                                required
-                               aria-required="true">
+                               autocomplete="given-name">
                     </div>
 
                     <div class="form-field">
@@ -89,7 +90,7 @@
                                    min="0"
                                    step="0.1"
                                    required
-                                   aria-required="true">
+                                   autocomplete="given-name">
                         </div>
 
                         <div class="form-field">
@@ -102,7 +103,7 @@
                                    min="0"
                                    step="0.1"
                                    required
-                                   aria-required="true">
+                                   autocomplete="given-name">
                         </div>
 
                         <div class="form-field form-field-full">
@@ -123,12 +124,12 @@
                         <div class="form-field form-field-full">
                             <label for="password" class="form-label">Password</label>
                             <input class="form-input"
-                                   type="password"
-                                   id="password"
-                                   name="password"
-                                   required
-                                   minlength="8"
-                                   aria-required="true">
+                             type="password"
+                             id="password"
+                             name="password"
+                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                             title="Must contain at least 8 characters, one uppercase letter, one lowercase letter, and a number"
+                            r equired>
                         </div>
 
                     <button class=" form-submit form-field-full" type="submit">Register</button>
