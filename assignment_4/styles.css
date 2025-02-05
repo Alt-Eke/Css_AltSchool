@@ -16,32 +16,34 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   line-height: 1.5;
-  box-sizing: border-box;
   background-color: #f6fcfb;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  min-height: 100vh;
+  place-items: center;
+  gap: 1rem;
 }
 
-header {
-  margin: 7% 10% 0 10%;
+header h1,
+.title__description {
+  padding-left: 0.6rem;
+  margin-top: 1.5rem;
 }
 
-.header,
-.signup__form {
-  flex: 1;
-}
+.title__description {
+  max-width: 500px;
+  color: #737373;
+  font-size: 1rem;
+  line-height: 1.56rem;
 
-footer {
-  flex-basis: 100%;
+  & p:nth-child(2) { display: none; }
 }
 
 section {
@@ -57,34 +59,10 @@ section {
   width: 100%;
 }
 
-.header h1 {
-  font-weight: 800;
-  font-size: 40px;
-  font-family: Lato, "Sofia Sans";
-  margin: 15px 0;
-  color: #000b0a;
-}
-
-.header h1,
-.title__description p {
-  padding-left: 10px;
-}
-
-.title__description p {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-text-secondary);
-}
-
-.mobile__description {
-  display: none;
-}
 
 /* Form container */
 .signup__form {
   width: 100%;
-  max-width: 600px;
-  margin: 1.5% 10% 0 0;
   background-color: #ffffff;
   box-shadow: 0 4px 50px 0 #0408131a;
 }
@@ -198,62 +176,3 @@ footer {
 }
 
 /* ========================= RWD (Mobile) ========================== */
-
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    padding: 10px;
-    margin-top: 25px;
-  }
-
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-
-  section {
-    max-width: 100%;
-  }
-
-  main {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 0 10px;
-    width: 100%;
-  }
-
-  .header {
-    margin: 0;
-  }
-
-  .desktop__description {
-    display: none;
-  }
-
-  .mobile__description {
-    display: block;
-    font-size: 18px;
-    font-weight: 100;
-    color: var(--color-text-secondary);
-    margin: 15px 0;
-  }
-
-  .signup__form {
-    margin: 20px 0;
-    width: 100%;
-  }
-
-  form .form-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  .form-field {
-    grid-column: span 2;
-  }
-
-  .form-submit {
-    margin: 0;
-  }
-
-}
