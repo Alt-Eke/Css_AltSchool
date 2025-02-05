@@ -30,8 +30,9 @@ main {
 }
 
 header {
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem 2rem 1rem;
   margin-bottom: 1rem;
+  /* background-color: #f7fdfc; */
 }
 
 header h1,
