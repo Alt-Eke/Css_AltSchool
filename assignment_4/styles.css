@@ -17,10 +17,9 @@
 
 body {
   line-height: 1.5;
-  background-color: #f6fcfb;
+  background-color: #f7fdfc;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  margin: 0 auto;
 }
 
 main {
@@ -28,7 +27,11 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   min-height: 100vh;
   place-items: center;
-  gap: 1rem;
+}
+
+header {
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
 }
 
 header h1,
@@ -47,11 +50,11 @@ header h1,
 }
 
 section {
-  max-width: 540px;
+  max-width: 600px;
 }
 
 .logo {
-  width: 80px;
+  width: 5rem;
   height: auto;
 }
 
@@ -63,14 +66,15 @@ section {
 /* Form container */
 .signup__form {
   width: 100%;
-  background-color: #ffffff;
   box-shadow: 0 4px 50px 0 #0408131a;
+  padding: 1rem;
 }
 
 /* Form fieldset */
 form .form-grid {
   display: grid;
   gap: 20px;
+  background-color: #ffffff;
   padding: 30px;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -160,19 +164,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.8;
 }
 
-/* Privacy policy agreement */
-footer {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 14px;
-  text-align: right;
-  color: #000000;
-  margin: -4% 13.5% 0 0;
-}
+@media (max-width: 468px) {
+  .title__description {
 
-/* Anchor tags: Terms & C and Privacy policy */
-.form-footer a {
-  color: var(--color-custom-green);
-}
+    & p:nth-child(1) { display: none; }
+    & p:nth-child(2) { display: block; }
+  }
 
-/* ========================= RWD (Mobile) ========================== */
+  .form-grid .form-field {
+    grid-column: span 2;
+  }
+
+  .logo {
+    width: 4rem;
+    height: auto;
+  }
+}
