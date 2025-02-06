@@ -10,16 +10,18 @@
 
 <body>
     <header>
-        <nav class="nav__bar">
-            <img src="./assets/wppusher-logo.svg" alt="company logo">
+        <nav class="nav__bar" aria-label="Main navigation">
+            <a href="/" class="logo">
+                <img src="./assets/wppusher-logo.svg" alt="WP Pusher Logo">
+            </a>
 
-            <div class="nav__links">
-                <a href="#">Download</a>
-                <a href="#">Learn more</a>
-                <a href="#">Pricing</a>
-                <a href="#">Help</a>
-                <a href="#">Account</a>
-            </div>
+            <ul class="nav__links">
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Learn more</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -28,15 +30,13 @@
 
             <!-- checkout info (white bg) -->
             <section class="checkout__form">
-                    <div class="checkout__title">
-                        <h2>Checkout</h2>
-                    </div>
+                    <h1 class="checkout__title">Checkout</h1>
 
                 <!-- Basic information -->
                 <div class="basic__info">
-                    <h3 class="numbered__heading" data-number="1"> Your Basic Informaton</h3>
+                    <h2 class="numbered__heading" data-number="1"> Your Basic Informaton</h2>
 
-                    <form action="#" method="post">
+                    <form role="form" action="#" method="post">
                         <div class="form__grid">
 
                             <div class="form__field">
@@ -63,13 +63,13 @@
 
                 <!-- Payment Information -->
                 <div class="payment__info">
-                    <h3 class="numbered__heading" data-number="2"> Your Payment Information</h3>
+                    <h2 class="numbered__heading" data-number="2"> Your Payment Information</h2>
 
                     <form action="#" method="post">
                         <div class="form__field">
                             <label for="credit-card" class="credit__card">Credit Card</label>
                             <input class="card__input" type="text" id="credit-card"
-                                placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
+                                placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
                                 pattern="[0-9\s]{13,19}" maxlength="26" inputmode="numeric" autocomplete="cc-number"
                                 required>
                         </div>
@@ -81,7 +81,7 @@
 
                 <!-- Help Support -->
                 <div class="support__container">
-                    <span class="help__icon"></span>
+                    <span class="help__icon" aria-hidden="true"></span>></span>
                     <p>
                         <strong>Need any help?</strong>
                         Don’t hesitate to <a class="support__link" href="#">contact</a> support!
@@ -96,17 +96,17 @@
             </section>
 
             <!-- plan description (blue bg) -->
-            <div class="checkout__plan">
+            <aside class="checkout__plan">
                 <div class="plan__content">
                     <h3>Freelancer</h3>
 
-                        <div class="price">
-                            <span class="price__currency">$</span>
-                            <div>
-                                <span class="price__amount">99</span>
-                                <span class="price__period">/ year</span>
-                            </div>
+                    <div class="price">
+                        <span class="price__currency">$</span>
+                        <div>
+                            <span class="price__amount">99</span>
+                            <span class="price__period">/ year</span>
                         </div>
+                    </div>
                     <p class="renewal__text">Automatically renews after 1 year</p>
                 </div>
 
@@ -139,7 +139,7 @@
                     </figure>
                 </blockquote>
 
-            </div>
+            </aside>
         </div>
     </main>
 
