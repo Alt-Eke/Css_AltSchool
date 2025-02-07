@@ -8,23 +8,21 @@
   padding: 0;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 :root {
-  --color-text-pri: #1d2c3c;
-  --color-text-sec: #ffffff;
-  --color-text-tetiary: #646e7a;
   --font-normal: 400;
   --font-bold: 700;
+  --color-text-pri: #1d2c3c;
+  --color-bg-sec: #038e7d;
+  --color-text-sec: #ffffff;
+  --color-text-tetiary: #646e7a;
+  --color-line: #e0e6ea;
   --font-size-small: 0.875rem;
   --shadow-x-axis: rgba(0, 0, 0, 0.15) 0 0.4rem 0 -0.25rem;
-}
-
-ul li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
 }
 
 body {
@@ -39,23 +37,30 @@ body {
 }
 
 /* ============== Navigation bar: Logo and Nav links ============== */
+
 .nav__bar {
   box-shadow: var(--shadow-x-axis);
   justify-content: center;
   gap: 47rem;
   padding: 1rem;
+  position: fixed;
+  top: 0; /* Pins to the top of the viewport */
+  width: 100%;
+  background-color: #f5f8fa; /* Prevents contents from showing through*/
+  z-index: 1000;
 }
 
 .nav__links {
   display: flex;
   gap: 3rem;
-  text-decoration: none;
   align-items: center;
   font-size: var(--font-size-small);
+  list-style: none;
 
   & a {
     color: var(--color-text-pri);
     font-weight: 700;
+    text-decoration: none;
     cursor: pointer;
   }
 
@@ -66,8 +71,25 @@ body {
   }
 }
 
-.nav__bar {
-  display: none;
+.nav__links li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.nav__links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-bg-sec);
+  transition: width 0.3s ease;
+}
+
+.nav__links li a:hover::after {
+  width: 100%;
 }
 
 /* ======== Checkout details: Basic info & pricing plan ======== */
@@ -75,25 +97,21 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: -10%;
+  min-height: 100vh;
+  margin-top: 125px;
 }
 
 .checkout {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 22rem;
   box-shadow: 0 0.93rem 2.9rem 0 #2b404e18;
   max-width: 892px;
-}
-
-.checkout__form {
-  padding: 2rem;
 }
 
 .checkout__title {
   text-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
   font-weight: var(--font-normal);
+  padding: 2rem;
 }
 
 .checkout__title,
@@ -102,8 +120,20 @@ label {
   color: var(--color-text-pri);
 }
 
-.basic__info {
-  margin: 2rem 0;
+.basic__info,
+.payment__info {
+  padding: 2rem;
+}
+
+.line {
+  border-top: 2px solid var(--color-line);
+  width: 100%;
+}
+
+.second__line {
+  border-top: 2px solid var(--color-line);
+  border-bottom: 2px solid var(--color-line);
+  width: 100%;
 }
 
 .numbered__heading {
@@ -144,10 +174,15 @@ input {
   padding: 0.5rem 1rem;
   border-radius: 2px;
   background-color: #edeff2;
+  outline: none;
 
   &::placeholder {
     font-family: var(--font-normal);
     font-size: 0.75rem;
+  }
+
+  &:focus {
+    border: 1px solid var(--color-bg-sec);
   }
 }
 
@@ -164,21 +199,22 @@ input {
 
 /* Buy Button */
 .buy__wppusher {
-  width: 100%;
+  width: 89%;
   padding: 0.8rem 0;
   border: none;
   border-radius: 4px;
-  background-color: #038e7d;
+  background-color: var(--color-bg-sec);
   font-weight: var(--font-bold);
   font-size: 1rem;
   color: #fff;
-  margin-top: 4rem;
+  margin-top: 4.5rem;
+  margin-left: 2rem;
 }
 
 /*================== Help Support Styles ================= */
 .support__container {
   font-size: var(--font-size-small);
-  margin: 1rem 0 0 1.75rem;
+  margin: 1rem 0 0 4rem;
   max-width: 17rem;
   position: relative;
 }
@@ -221,7 +257,7 @@ input {
   background-color: var(--color-text-tetiary);
   color: var(--color-text-se);
   left: 50%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   color: var(--color-text-sec);
 
   & .strip {
@@ -234,7 +270,7 @@ input {
 /* Plan and Pricing (Smaller container: light blue Bg) */
 
 .checkout__plan {
-  background-color: #1179BF;
+  background-color: #1179bf;
   padding: 2rem;
   color: var(--color-text-sec);
   font-weight: var(--font-normal);
@@ -267,7 +303,7 @@ input {
   margin-top: 15px;
   padding-right: 3px;
   font-weight: var(--font-bold);
-  font-size:var(--font-size-small);
+  font-size: var(--font-size-small);
 }
 
 /* list of plan benefits (3 round-ticked bullets) */
@@ -282,7 +318,7 @@ input {
     content: "";
     padding-right: 30px;
     padding-bottom: 20px;
-    background: url('./assets/bullet-circle.svg') no-repeat;
+    background: url("./assets/bullet-circle.svg") no-repeat;
   }
 }
 
@@ -316,9 +352,22 @@ span.italics__agency {
 figure {
   display: flex;
   gap: 1rem;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem auto;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
+footer p {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  color: var(--color-text-tetiary)
+}
+
+.terms {
+  color: #1179bf;
+  text-decoration: none;
+}
 
 /* ============ RWD: Media Queries ============ */
 

@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="nav__bar" aria-label="Main navigation">
-            <a href="/" class="logo">
+            <a href="#" class="logo">
                 <img src="./assets/wppusher-logo.svg" alt="WP Pusher Logo">
             </a>
 
@@ -23,6 +23,7 @@
                 <li><a href="#">Account</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
@@ -33,47 +34,46 @@
                 <h1 class="checkout__title">Checkout</h1>
 
                 <!-- Basic information -->
-                <div class="basic__info">
-                    <h2 class="numbered__heading" data-number="1"> Your Basic Informaton</h2>
-
-                    <form role="form" action="#" method="post">
-                        <div class="form__grid">
-
-                            <div class="form__field">
-                                <label for="first-name" class="first__name">First Name</label>
-                                <input class="form__input" type="text" id="first-name" name="first-name"
-                                    placeholder="Jane" required>
+                <div class="line">
+                    <div class="basic__info">
+                        <h2 class="numbered__heading" data-number="1"> Your Basic Informaton</h2>
+                        <form role="form" action="#" method="post">
+                            <div class="form__grid">
+                                <div class="form__field">
+                                    <label for="first-name" class="first__name">First Name</label>
+                                    <input class="form__input" type="text" id="first-name" name="first-name"
+                                        placeholder="Jane" required>
+                                </div>
+                                <div class="form__field">
+                                    <label for="last-name" class="last__name">Last Name</label>
+                                    <input class="form__input" type="text" id="last-name" name="last-name" placeholder="Doe"
+                                        required>
+                                </div>
+                                <div class="form__field full__width">
+                                    <label for="email" class="email">Email</label>
+                                    <input class="form__input" type="email" id="email" name="email"
+                                        placeholder="johndoe@example.com" required>
+                                </div>
                             </div>
-
-                            <div class="form__field">
-                                <label for="last-name" class="last__name">Last Name</label>
-                                <input class="form__input" type="text" id="last-name" name="last-name" placeholder="Doe"
-                                    required>
-                            </div>
-
-                            <div class="form__field full__width">
-                                <label for="email" class="email">Email</label>
-                                <input class="form__input" type="email" id="email" name="email"
-                                    placeholder="johndoe@example.com" required>
-                            </div>
-                        </div>
+                </div>
 
                     </form>
                 </div>
 
                 <!-- Payment Information -->
-                <div class="payment__info">
-                    <h2 class="numbered__heading" data-number="2"> Your Payment Information</h2>
-
-                    <form action="#" method="post">
-                        <div class="form__field">
-                            <label for="credit-card" class="credit__card">Credit Card</label>
-                            <input class="card__input" type="text" id="credit-card"
-                                placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
-                                pattern="[0-9\s]{13,19}" maxlength="26" inputmode="numeric" autocomplete="cc-number"
-                                required>
-                        </div>
-                    </form>
+                <div class="second__line">
+                    <div class="payment__info">
+                        <h2 class="numbered__heading payment__heading" data-number="2"> Your Payment Information</h2>
+                        <form action="#" method="post">
+                            <div class="form__field">
+                                <label for="credit-card" class="credit__card">Credit Card</label>
+                                <input class="card__input" type="text" id="credit-card"
+                                    placeholder="Card Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;MM/YY &emsp;CCV"
+                                    pattern="[0-9\s]{13,19}" maxlength="26" inputmode="numeric" autocomplete="cc-number"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- Buy button -->
@@ -141,7 +141,7 @@
 
     <!-- Footer: copy right and T&C -->
     <footer>
-        <!-- <p>&copy; 2018 WP Pusher IVS · <a href="" class="terms">Terms of Service</a></p> -->
+        <p>&copy; 2018 WP Pusher IVS · <a href="" class="terms">Terms of Service</a></p>
     </footer>
 </body>
 
