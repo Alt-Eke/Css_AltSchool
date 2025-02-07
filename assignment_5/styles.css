@@ -51,7 +51,7 @@ body {
 }
 
 .nav__links {
-  display: flex;
+  display: none;
   gap: 3rem;
   align-items: center;
   font-size: var(--font-size-small);
@@ -69,6 +69,10 @@ body {
     border-radius: 4px;
     padding: 0.3rem 0.6rem;
   }
+}
+
+.nav__links.active {
+  left: 0;
 }
 
 .nav__links li a {
@@ -90,10 +94,6 @@ body {
 
 .nav__links li a:hover::after {
   width: 100%;
-}
-
-.nav__links {
-  display: none;
 }
 
 .mobile__menu {
@@ -389,6 +389,7 @@ footer p {
     grid-template-columns: 65% 35%;
   }
 
+  .nav__bar,
   .nav__links {
     display: flex;
   }
@@ -399,10 +400,6 @@ footer p {
 
   .form__grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .nav__bar {
-    display: flex;
   }
 
   .support__container {
