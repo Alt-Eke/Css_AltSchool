@@ -96,6 +96,11 @@ body {
   display: none;
 }
 
+.mobile__menu {
+  margin-left: 7.5rem;
+  display: inline;
+}
+
 /* ======== Checkout details: Basic info & pricing plan ======== */
 main {
   display: flex;
@@ -386,6 +391,10 @@ footer p {
 
   .nav__links {
     display: flex;
+  }
+
+  .mobile__menu {
+    display: none;
   }
 
   .form__grid {
