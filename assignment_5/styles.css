@@ -51,11 +51,11 @@ body {
 }
 
 .nav__links {
-  /* display: none; */
   gap: 3rem;
   align-items: center;
   font-size: var(--font-size-small);
   list-style: none;
+  top: 60px;
 
   & a {
     color: var(--color-text-pri);
@@ -98,8 +98,7 @@ body {
 
 .mobile__menu {
   margin-left: 7.5rem;
-  display: inline;
-  /* cursor: pointer; */
+  display: inline-block;
 }
 
 /* ======== Checkout details: Basic info & pricing plan ======== */
@@ -122,6 +121,7 @@ main {
 .checkout__title {
   text-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
   font-weight: var(--font-normal);
+  font-size: 1.8rem;
   padding: 2rem;
 }
 
@@ -150,7 +150,7 @@ label {
 .numbered__heading {
   position: relative;
   padding-left: 2.5rem;
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: var(--font-bold);
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
@@ -175,7 +175,7 @@ label {
 /* All label & input boxes */
 label {
   display: block;
-  font-size: var(--font-size-small);
+  font-size: 1.12rem;
   margin-bottom: 0.2rem;
 }
 
@@ -286,7 +286,7 @@ input {
 }
 
 .plan__content h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: var(--font-bold);
 }
 
