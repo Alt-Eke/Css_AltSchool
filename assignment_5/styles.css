@@ -92,6 +92,10 @@ body {
   width: 100%;
 }
 
+.nav__links {
+  display: none;
+}
+
 /* ======== Checkout details: Basic info & pricing plan ======== */
 main {
   display: flex;
@@ -99,6 +103,7 @@ main {
   align-items: center;
   min-height: 100vh;
   margin-top: 125px;
+  padding: 0 1rem;
 }
 
 .checkout {
@@ -199,22 +204,21 @@ input {
 
 /* Buy Button */
 .buy__wppusher {
-  width: 89%;
   padding: 0.8rem 0;
+  width: 100%;
   border: none;
   border-radius: 4px;
   background-color: var(--color-bg-sec);
   font-weight: var(--font-bold);
   font-size: 1rem;
   color: #fff;
-  margin-top: 4.5rem;
-  margin-left: 2rem;
+  margin: 3rem 0 0 0;
 }
 
 /*================== Help Support Styles ================= */
 .support__container {
   font-size: var(--font-size-small);
-  margin: 1rem 0 0 4rem;
+  margin: 1rem 0 0 2rem;
   max-width: 17rem;
   position: relative;
 }
@@ -345,6 +349,10 @@ input {
   line-height: 2px;
 }
 
+.checkout__footer {
+  padding: 0 2rem;
+}
+
 span.italics__agency {
   font-style: italic;
 }
@@ -361,7 +369,7 @@ figure {
 footer p {
   text-align: center;
   margin: 1rem 0 2rem 0;
-  color: var(--color-text-tetiary)
+  color: var(--color-text-tetiary);
 }
 
 .terms {
@@ -376,6 +384,10 @@ footer p {
     grid-template-columns: 65% 35%;
   }
 
+  .nav__links {
+    display: flex;
+  }
+
   .form__grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -386,5 +398,9 @@ footer p {
 
   .support__container {
     margin: 1rem 0 0 7rem;
+  }
+
+  .buy__wppusher {
+    margin: 4.5rem 0 0 0;
   }
 }
