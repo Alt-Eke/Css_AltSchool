@@ -51,7 +51,7 @@ body {
 }
 
 .nav__links {
-  display: none;
+  /* display: none; */
   gap: 3rem;
   align-items: center;
   font-size: var(--font-size-small);
@@ -72,7 +72,7 @@ body {
 }
 
 .nav__links.active {
-  left: 0;
+  display: none;
 }
 
 .nav__links li a {
@@ -99,6 +99,7 @@ body {
 .mobile__menu {
   margin-left: 7.5rem;
   display: inline;
+  /* cursor: pointer; */
 }
 
 /* ======== Checkout details: Basic info & pricing plan ======== */
@@ -277,7 +278,6 @@ input {
 }
 
 /* Plan and Pricing (Smaller container: light blue Bg) */
-
 .checkout__plan {
   background-color: #1179bf;
   padding: 2rem;
@@ -291,7 +291,6 @@ input {
 }
 
 /* ============ Checkout Price plan/details =========== */
-
 .price .price__amount {
   font-size: 2.8rem;
   font-weight: 300;
@@ -391,6 +390,10 @@ footer p {
 
   .nav__bar,
   .nav__links {
+    display: flex;
+  }
+
+  .nav__links.active {
     display: flex;
   }
 
