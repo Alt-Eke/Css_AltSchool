@@ -47,6 +47,8 @@ body {
   background: url("./assets/bg-aurora.svg") no-repeat center center;
   background-size: cover;
   -webkit-font-smoothing: antialiased;
+  color: var(--color-text-pri);
+  line-height: 1.5rem;
 }
 
 /* Navigation bar */
@@ -196,19 +198,17 @@ main {
   display: grid;
   place-items: center;
   text-align: center;
-  line-height: 1.5rem;
 
   h1 {
     font-family: Gilroy-Bold;
     line-height: 2rem;
-    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
   }
 
   p {
     max-width: 60rem;
     font-family: Gilroy-Medium;
-    color: var(--color-text-prt);
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     margin-top: 0.5rem;
   }
 }
@@ -217,7 +217,7 @@ main {
 .cta__btn {
   display: flex;
   gap: 2.5rem;
-  margin: 2rem;
+  margin: 3rem;
   align-items: baseline;
   font-family: Gilroy-SemiBold;
 
@@ -241,36 +241,85 @@ main {
 /* Achievement section: "One Stop. Four Possibilities." */
 .possibilities {
   display: grid;
-  place-items: center;
+  margin: 1rem 0;
 
-  h2 {
-    font-family: Gilroy-Bold;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    text-align: center;
+  .possibility__title {
+    h2 {
+      font-family: Gilroy-Bold;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      line-height: clamp(2rem, 4vw, 3rem);
+    }
   }
 
   .possibility__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 3rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 
     & .possibility__item {
       .title {
         font-family: Gilroy-SemiBold;
         font-size: clamp(1.3rem, 4vw, 2rem);
+        margin-bottom: 0.5rem;
       }
       p {
         font-family: Gilroy-Medium;
-        color: var(--color-text-pri);
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        line-height: clamp(1rem, 4vw, 1.5rem);
       }
     }
   }
 }
 
+.features__section {
+  display: grid;
+  place-items: center;
+
+  h2 {
+    font-family: Gilroy-Bold;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: Gilroy-Medium;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .features__item {
+    h3 {
+      font-family: Gilroy-SemiBold;
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      margin: 1rem 0;
+    }
+  }
+}
+
 /* ========== RWD: Media Queries =========== */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+  .hero__section h1 {
+    margin: 1rem 0;
+  }
+
+  .hero__section p {
+    line-height: 2rem;
+  }
+
+  .stroke__design {
+    display: block;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 835px) {
   main {
     margin-top: 150px;
   }
@@ -283,7 +332,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 13rem;
+    gap: 6rem;
   }
 
   .nav__menu {
@@ -295,12 +344,12 @@ main {
     width: auto;
     display: flex;
     align-items: center;
-    gap: 13rem;
+    gap: 6rem;
   }
 
   .nav__menu ul {
     display: flex;
-    gap: 4rem;
+    gap: 3.5rem;
     margin-bottom: 0;
     align-items: center;
   }
@@ -348,6 +397,10 @@ main {
     margin: 2.5rem 0;
   }
 
+  .hero__section p {
+    line-height: 2rem;
+  }
+
   .stroke__design {
     display: block;
   }
@@ -364,7 +417,30 @@ main {
 
     .possibility__list {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 3rem;
+
+      .possibility__item {
+        max-width: 11rem;
+      }
+    }
+  }
+
+  .features__section {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: 7rem 0 1rem 0;
+    gap: 5rem;
+
+    .features__title {
+      max-width: 27rem;
+    }
+
+    .features {
+      gap: 5rem;
+
+      .features__item {
+        max-width: 20rem;
+      }
     }
   }
 }
