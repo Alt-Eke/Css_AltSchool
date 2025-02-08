@@ -118,30 +118,6 @@ summary {
   font-size: 1rem;
 }
 
-main {
-  margin-top: 72px;
-  padding: 0 1rem;
-}
-
-.hero__section {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  line-height: 1.5rem;
-
-  h1 {
-    font-family: Gilroy-Bold;
-    line-height: 2rem;
-  }
-
-  p {
-    max-width: 60rem;
-    font-family: Gilroy-Medium;
-    color: var(--color-text-prt);
-    font-size: clamp(1rem, 5vw, 1.5rem);
-  }
-}
-
 /* ====== Call to Action (CTA buttons) ====== */
 .nav__cta {
   display: grid;
@@ -209,10 +185,59 @@ main {
   }
 }
 
+main {
+  margin-top: 100px;
+  padding: 0 1rem;
+}
+
+.hero__section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+
+  h1 {
+    font-family: Gilroy-Bold;
+    line-height: 2rem;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+  }
+
+  p {
+    max-width: 60rem;
+    font-family: Gilroy-Medium;
+    color: var(--color-text-prt);
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-top: 0.5rem;
+  }
+}
+
+/* Hero Section: Sign up and Learn More button  */
+.cta__btn {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  align-items: baseline;
+  font-family: Gilroy-SemiBold;
+
+  a:first-child {
+    color: #fff;
+    background-color: var(--color-text-sec);
+    padding: 0.5rem 2.5rem;
+    border-radius: 100px;
+  }
+
+  a:last-child {
+    color: var(--color-text-sec);
+  }
+}
 
 
 /* ========== RWD: Media Queries =========== */
 @media (min-width: 769px) {
+  main {
+    margin-top: 150px;
+  }
+
   .menu__icon {
     display: none;
   }
@@ -280,5 +305,9 @@ main {
     .free__trial {
       padding: 0.6rem 1.5rem;
     }
+  }
+
+  .hero__section h1 {
+    margin: 2.5rem 0;
   }
 }
