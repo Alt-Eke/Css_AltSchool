@@ -96,7 +96,7 @@ body {
   padding: 0.5rem 0;
 }
 
-/* ======== Dropdown styles ======== */
+/* ======== nav: Features => Dropdown styles ======== */
 details {
   margin-bottom: 1.5rem;
 }
@@ -118,10 +118,33 @@ summary {
   font-size: 1rem;
 }
 
+main {
+  margin-top: 72px;
+  padding: 0 1rem;
+}
+
+.hero__section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+
+  h1 {
+    font-family: Gilroy-Bold;
+    line-height: 2rem;
+  }
+
+  p {
+    max-width: 60rem;
+    font-family: Gilroy-Medium;
+    color: var(--color-text-prt);
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+}
+
 /* ====== Call to Action (CTA buttons) ====== */
 .nav__cta {
   display: grid;
-  gap: 1rem;
 
   & a {
     text-align: center;
@@ -136,6 +159,7 @@ summary {
     background-color: var(--color-text-sec);
     border-radius: 100px;
     color: #fff;
+    padding: 1.2rem;
   }
 }
 
@@ -168,7 +192,7 @@ summary {
   top: 16px;
 }
 
-/* ====== Change/rotate to an (X) icon when clicked ===== */
+/* ==== Change/rotate to an X icon when clicked ==== */
 .menu__icon.active {
   span:first-child {
     transform: rotate(45deg);
@@ -185,10 +209,19 @@ summary {
   }
 }
 
+
+
 /* ========== RWD: Media Queries =========== */
 @media (min-width: 769px) {
   .menu__icon {
     display: none;
+  }
+
+  .nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13rem;
   }
 
   .nav__menu {
@@ -200,12 +233,12 @@ summary {
     width: auto;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 13rem;
   }
 
   .nav__menu ul {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 0;
     align-items: center;
   }
@@ -241,5 +274,11 @@ summary {
 
   .nav__cta {
     display: flex;
+    align-items: baseline;
+    gap: 2rem;
+
+    .free__trial {
+      padding: 0.6rem 1.5rem;
+    }
   }
 }

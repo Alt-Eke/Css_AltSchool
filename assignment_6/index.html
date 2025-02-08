@@ -45,9 +45,15 @@
         </nav>
     </header>
 
-    <section class="hero__section">
-
-    </section>
+    <main>
+        <section class="hero__section">
+            <h1>Optimize Your Online Experience with Our</h1>
+            <h1>Advanced <span class="sec__color">URL Shortening</span> Solution</h1>
+            <p>
+                Personalize your shortened URLs to align with your brand identity. Utilize custom slugs, branded links, and domain customization options to reinforce your brand presence and enhance user engagement.
+            </p>
+        </section>
+    </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +65,7 @@
                 navList.classList.toggle('active');
             });
 
-            // Close menu when clicking a link (mobile only)
+            // Close menu when a link is clicked (mobile only)
             if (window.innerWidth < 769) {
                 const navLinks = document.querySelectorAll('.nav__menu a');
                 navLinks.forEach(link => {
