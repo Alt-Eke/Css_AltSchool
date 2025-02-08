@@ -61,6 +61,8 @@ body {
   padding: 1rem 2rem;
   z-index: 1000;
   font-family: Gilroy-Medium;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Nav Menus: Mobile first */
