@@ -11,7 +11,8 @@
 }
 
 a,
-button {
+button,
+.menu__icon {
   cursor: pointer;
 }
 
@@ -55,7 +56,6 @@ body {
 
     /* Navigation list - mobile first styles */
     .nav__list {
-      list-style: none;
       position: fixed;
       top: 60px;
       left: 0;
@@ -78,7 +78,6 @@ body {
 
 .nav__list a {
     color: #1d2c3c;
-    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
     display: block;
@@ -94,7 +93,6 @@ body {
 
 /* Mobile menu icon */
 .menu__icon {
-  cursor: pointer;
   width: 30px;
   height: 20px;
   position: relative;
@@ -473,7 +471,7 @@ footer p {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #038e7d;
+    background-color: var(--color-bg-sec);
     transition: width 0.3s ease;
 }
 
