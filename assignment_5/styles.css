@@ -149,6 +149,7 @@ main {
   grid-template-columns: 1fr;
   box-shadow: 0 0.93rem 2.9rem 0 #2b404e18;
   max-width: 892px;
+  border-radius: 8px;
 }
 
 .checkout__title {
@@ -316,6 +317,7 @@ input {
   padding: 2rem;
   color: var(--color-text-sec);
   font-weight: var(--font-normal);
+  border-radius: 0 0 8px 8px;
 }
 
 .plan__content h3 {
@@ -419,6 +421,11 @@ footer p {
 @media (min-width: 768px) {
   .checkout {
     grid-template-columns: 65% 35%;
+    border-radius: 0;
+  }
+
+  .checkout__plan {
+    border-radius: 0;
   }
 
   .form__grid {
@@ -437,7 +444,6 @@ footer p {
     justify-content: center;
     gap: 40rem;
     padding: 1rem;
-    /* max-width: 1200px; */
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
