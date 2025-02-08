@@ -217,7 +217,7 @@ main {
 .cta__btn {
   display: flex;
   gap: 2.5rem;
-  margin-top: 3rem;
+  margin: 2rem;
   align-items: baseline;
   font-family: Gilroy-SemiBold;
 
@@ -233,6 +233,41 @@ main {
   }
 }
 
+.stroke__design {
+  margin-top: -30px;
+  display: none;
+}
+
+/* Achievement section: "One Stop. Four Possibilities." */
+.possibilities {
+  display: grid;
+  place-items: center;
+
+  h2 {
+    font-family: Gilroy-Bold;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+  }
+
+  .possibility__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+
+    & .possibility__item {
+      .title {
+        font-family: Gilroy-SemiBold;
+        font-size: clamp(1.3rem, 4vw, 2rem);
+      }
+      p {
+        font-family: Gilroy-Medium;
+        color: var(--color-text-pri);
+        font-size: clamp(1rem, 4vw, 1.5rem);
+      }
+    }
+  }
+}
 
 /* ========== RWD: Media Queries =========== */
 @media (min-width: 769px) {
@@ -311,5 +346,25 @@ main {
 
   .hero__section h1 {
     margin: 2.5rem 0;
+  }
+
+  .stroke__design {
+    display: block;
+  }
+
+  .possibilities {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 3rem;
+
+    h2 {
+      text-align: initial;
+    }
+
+    .possibility__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
   }
 }
