@@ -342,12 +342,14 @@ main {
 
   .pricing {
     display: grid;
-    align-items: start;
+    align-items: center;
     position: relative;
+    gap: 1.5rem;
 
     .pricing__item {
       padding: 2rem;
       border: 1px solid var(--color-text-sec);
+      border-radius: 12px;
 
       h3,
       h4,
@@ -375,13 +377,6 @@ main {
         font-family: Gilroy-Bold;
         font-size: clamp(1.3rem, 4vw, 2.5rem);
       }
-    }
-
-    .pricing__item:nth-child(1) {
-      border-radius: 12px 12px 0 0;
-    }
-    .pricing__item:nth-child(3) {
-      border-radius: 0 0 12px 12px;
     }
 
     .pricing__item:nth-child(2) {
@@ -556,10 +551,10 @@ main {
   }
 
   .pricing__section {
-    margin-top: 8rem;
+    margin-top: 10rem;
 
     .pricing__title {
-      margin-bottom: 5rem;
+      margin: 0;
     }
 
     .pricing {
@@ -573,8 +568,6 @@ main {
       .pricing__item:nth-child(2) {
         height: 560px;
         transform: scale(1.1);
-        top: -11%;
-        position: relative;
         z-index: 2;
       }
     }
