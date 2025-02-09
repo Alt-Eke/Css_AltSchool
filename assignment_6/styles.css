@@ -324,7 +324,7 @@ main {
 .pricing__section {
   display: grid;
   place-items: center;
-  margin: 8rem 0;
+  margin: 3.5rem 0;
 
   .pricing__title {
     margin-bottom: 1rem;
@@ -344,23 +344,71 @@ main {
     display: grid;
     align-items: start;
     position: relative;
-    margin-top: 5rem;
 
     .pricing__item {
       padding: 2rem;
       border: 1px solid var(--color-text-sec);
-      border-radius: 12px;
+
+      h3,
+      h4,
+      h5,
+      ul li {
+        margin-bottom: 1.5rem;
+        color: var(--color-text-primary);
+      }
+
+      h3,
+      h5,
+      ul li {
+        font-family: Gilroy-Medium;
+      }
+
+      ul li {
+        font-size: clamp(0.6rem, 4vw, 0.87rem);
+      }
+
+      h5 {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+      }
+
+      h4 {
+        font-family: Gilroy-Bold;
+        font-size: clamp(1.3rem, 4vw, 2.5rem);
+      }
+    }
+
+    .pricing__item:nth-child(1) {
+      border-radius: 12px 12px 0 0;
+    }
+    .pricing__item:nth-child(3) {
+      border-radius: 0 0 12px 12px;
     }
 
     .pricing__item:nth-child(2) {
       background-color: #1e3448;
       color: #fff;
     }
+  }
 
-    .pricing__item:nth-child(1),
-    .pricing__item:nth-child(3) {
-      z-index: 1;
-      position: relative;
+  .select__pricing {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    font-family: Gilroy-SemiBold;
+    font-size: clamp(0.85rem, 4vw, 1rem);
+
+    a:first-child {
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      border: 1px solid var(--color-text-sec);
+      color: var(--color-text-sec);
+    }
+
+    a:last-child {
+      padding: 0.5rem 2rem;
+      border-radius: 100px;
+      background-color: var(--color-text-sec);
+      color: #fff;
     }
   }
 }
@@ -507,15 +555,32 @@ main {
     }
   }
 
-  .pricing {
-    grid-template-columns: repeat(3, 1fr);
+  .pricing__section {
+    margin-top: 8rem;
 
-    .pricing__item:nth-child(2) {
-      height: 350px;
-      transform: scale(1.1);
-      transform: translateY(-50px);
-      position: relative;
-      z-index: 2;
+    .pricing__title {
+      margin-bottom: 5rem;
+    }
+
+    .pricing {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 5rem;
+
+      .pricing__item {
+        border-radius: 12px;
+      }
+
+      .pricing__item:nth-child(2) {
+        height: 560px;
+        transform: scale(1.1);
+        top: -11%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .select__pricing {
+      margin-top: 0.5rem;
     }
   }
 }
