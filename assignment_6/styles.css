@@ -42,12 +42,22 @@ button,
   color: var(--color-text-sec);
 }
 
+h1,
+h2 {
+  font-family: Gilroy-Bold;
+}
+
+h3 {
+  font-family: Gilroy-SemiBold;
+}
+
 body {
   min-height: 100vh;
   background: url("./assets/bg-aurora.svg") no-repeat center center;
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text-pri);
+  font-family: Gilroy-Medium;
   line-height: 1.5rem;
 }
 
@@ -175,8 +185,7 @@ summary {
 /* ==== Change/rotate to an X icon when clicked ==== */
 .menu__icon.active {
   span:first-child {
-    transform: rotate(45deg);
-    top: 8px;
+    transform: rotate(45deg) translateY(8px);
   }
 
   span:nth-child(2) {
@@ -184,8 +193,7 @@ summary {
   }
 
   span:last-child {
-    transform: rotate(-45deg);
-    top: 8px;
+    transform: rotate(-45deg) translateY(-8px);
   }
 }
 
@@ -200,14 +208,12 @@ main {
   text-align: center;
 
   h1 {
-    font-family: Gilroy-Bold;
     line-height: 2rem;
     font-size: clamp(1.5rem, 4vw, 3rem);
   }
 
   p {
     max-width: 60rem;
-    font-family: Gilroy-Medium;
     font-size: clamp(1rem, 4vw, 1.4rem);
     margin-top: 0.5rem;
   }
@@ -234,18 +240,16 @@ main {
 }
 
 .stroke__design {
-  margin-top: -30px;
   display: none;
 }
 
 /* Achievement section: "One Stop. Four Possibilities." */
 .possibilities {
   display: grid;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
 
   .possibility__title {
     h2 {
-      font-family: Gilroy-Bold;
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       line-height: clamp(2rem, 4vw, 3rem);
     }
@@ -265,7 +269,6 @@ main {
         margin-bottom: 0.5rem;
       }
       p {
-        font-family: Gilroy-Medium;
         font-size: clamp(1rem, 4vw, 1.2rem);
         line-height: clamp(1rem, 4vw, 1.5rem);
       }
@@ -273,18 +276,18 @@ main {
   }
 }
 
+.features__title,
+.pricing__title {
+  margin-left: 0.6rem;
+}
+
 .features__section {
   display: grid;
   place-items: center;
 
   h2 {
-    font-family: Gilroy-Bold;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin-bottom: 1rem;
-  }
-
-  p {
-    font-family: Gilroy-Medium;
   }
 
   .features {
@@ -296,9 +299,68 @@ main {
 
   .features__item {
     h3 {
-      font-family: Gilroy-SemiBold;
       font-size: clamp(1.3rem, 4vw, 2rem);
       margin: 1rem 0;
+    }
+  }
+}
+
+/* linear bg vertical line before headings */
+.linear__bullet--line {
+  position: relative;
+}
+
+.linear__bullet--line::before {
+  content: "";
+  width: 4px;
+  left: -1rem;
+  top: -5px;
+  position: absolute;
+  height: 45px;
+  background: linear-gradient(to bottom, #112232, #4d6b88, #fff);
+}
+
+/* =========== Pricing Section ============== */
+.pricing__section {
+  display: grid;
+  place-items: center;
+  margin: 8rem 0;
+
+  .pricing__title {
+    margin-bottom: 1rem;
+    max-width: 35rem;
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .pricing {
+    display: grid;
+    align-items: start;
+    position: relative;
+    margin-top: 5rem;
+
+    .pricing__item {
+      padding: 2rem;
+      border: 1px solid var(--color-text-sec);
+      border-radius: 12px;
+    }
+
+    .pricing__item:nth-child(2) {
+      background-color: #1e3448;
+      color: #fff;
+    }
+
+    .pricing__item:nth-child(1),
+    .pricing__item:nth-child(3) {
+      z-index: 1;
+      position: relative;
     }
   }
 }
@@ -403,6 +465,7 @@ main {
 
   .stroke__design {
     display: block;
+    margin-top: -30px;
   }
 
   .possibilities {
@@ -441,6 +504,18 @@ main {
       .features__item {
         max-width: 20rem;
       }
+    }
+  }
+
+  .pricing {
+    grid-template-columns: repeat(3, 1fr);
+
+    .pricing__item:nth-child(2) {
+      height: 350px;
+      transform: scale(1.1);
+      transform: translateY(-50px);
+      position: relative;
+      z-index: 2;
     }
   }
 }
