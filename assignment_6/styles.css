@@ -498,6 +498,7 @@ background-color: rgba(248, 247, 247, 1);
           border-radius: 12px;
           border: 1px solid var(--color-text-sec);
           padding: 1rem;
+          width: 100%;
         }
 
         input:first-child {
@@ -511,6 +512,7 @@ background-color: rgba(248, 247, 247, 1);
         border-radius: 100px;
         background-color: var(--color-text-sec);
         border: none;
+        color: #fff;
       }
 
       p {
